@@ -18,19 +18,25 @@ public class Main {
     {
         HashMap<Integer,Occurence> hm1= new HashMap<Integer,Occurence>();
         HashSet<Integer> h1= new HashSet<Integer>();
+        //elminiate duplicate elements from the array so we only have to search for one instance of the element
         for(int i=0;i<a.length;i++)
         {
             h1.add(a[i]);
         }
+
+        //loop over each instance and find its number of occurences on the original array
         Iterator iter = h1.iterator();
         while (iter.hasNext()) 
         {
             int num=(Integer) iter.next();
             Occurence current=findOccurence1(a,num);
+            //insert it into a HashMap with key the number of occunerences
             hm1.put(current.getOccurence(), current);
         }
+        //put keys in ascending order in a TreeSet
         TreeSet<Integer> occurences = new TreeSet<Integer>(hm1.keySet());
         Iterator iterator;
+        //traverse the TreeSet in a desceding order
         iterator = occurences.descendingIterator();
      
         while (iterator.hasNext()) 
