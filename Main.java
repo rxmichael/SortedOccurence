@@ -3,27 +3,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.TreeSet;
 import java.util.SortedSet;
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Apple
- */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         
         int[] a= {5,2,3,4,5,6,7,8,9,10,4,5,6,3,8,9};
         
-        Occurence o1= new Occurence(1,2);
-        Occurence test1=findOccurence1(a,5);
-       System.out.println(test1.toString());
        findOccurence(a);
     }
     
@@ -55,6 +42,7 @@ public class Main {
     }
     public static Occurence findOccurence1(int[] a,int num)
     {
+        //find occurences for a specific number in the array
                  
             int number=num;
             int count=0;
